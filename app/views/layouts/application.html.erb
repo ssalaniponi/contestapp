@@ -65,6 +65,7 @@
         <div class="col-lg-3">
 
           <div class="row-fluid">
+
             <% if content_for?(:sidebar) %>
               <div class="span3">
                 <div class="well sidebar-nav">
@@ -72,15 +73,14 @@
                 </div>
               </div>
               <div class="span9">
-                <%= bootstrap_flash %>
-                <%= yield %>
+                
               </div>
             <% else %>
               <div class="span12">
-                <%= bootstrap_flash %>
-                <%= yield %>
+               
               </div>
             <% end %>
+
           </div>
 
         </div><!--/span-->
