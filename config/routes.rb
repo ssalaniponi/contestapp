@@ -1,11 +1,17 @@
 Contestapp::Application.routes.draw do
+  resources :orders do
+    collection do
+      get 'import'
+    end
+  end
+
   resources :products do
     collection do
       get 'import'
     end
     resources :variants
   end
-
+  
   resources :accounts do
     member do
       get 'test_connection'
