@@ -63,15 +63,26 @@
           <%= yield %>
         </div>
         <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
+
+          <div class="row-fluid">
+            <% if content_for?(:sidebar) %>
+              <div class="span3">
+                <div class="well sidebar-nav">
+                  <%= yield(:sidebar) %>
+                </div>
+              </div>
+              <div class="span9">
+                <%= bootstrap_flash %>
+                <%= yield %>
+              </div>
+            <% else %>
+              <div class="span12">
+                <%= bootstrap_flash %>
+                <%= yield %>
+              </div>
+            <% end %>
+          </div>
+
         </div><!--/span-->
       </div><!--/row-->
 
