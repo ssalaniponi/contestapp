@@ -24,6 +24,7 @@ group :development, :test do
 	gem "guard-rspec" # guard integration with rspec
 	# Only install the rb-fsevent gem if on Max OSX
 	gem 'rb-fsevent' # used for Growl notifications
+	gem 'describe' # 
 end
 
 # Use SCSS for stylesheets
