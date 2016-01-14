@@ -77,8 +77,7 @@ class ShopifyIntegration
                             shopify_order_id: shopify_order.id,
                             order_date: shopify_order.created_at,
                             total: shopify_order.total_price,
-                            financial_status: shopify_order.financial_status,
-                            account_id: @account_id
+                            financial_status: shopify_order.financial_status
                             )
 
           # Iterate through the line_items
