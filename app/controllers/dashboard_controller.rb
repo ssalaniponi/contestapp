@@ -18,7 +18,7 @@ class DashboardController < ApplicationController
     @contest = Contest.new(contest_params)
 
     # Store the name of the product for easier readability
-    @contest.product_name = Product.find_by_shopify_product_id(contest_params[:product_id]).try(:name) if contest_params[:product_id].present?
+    # @contest.product_name = Product.find_by_shopify_product_id(contest_params[:product_id]).try(:name) if contest_params[:product_id].present?
 
     respond_to do |format|
       if @contest.save
